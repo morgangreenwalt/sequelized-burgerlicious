@@ -2,7 +2,7 @@ var db = require("../models");
 
 module.exports = function(app) {
     app.get("/", function(req, res) {
-        db.Burger.findAll({
+        db.Burgers.findAll({
             where: {
                 devoured: false
             }
@@ -12,7 +12,7 @@ module.exports = function(app) {
     });
 
     app.post("/", function(req, res) {
-        db.Burger.create({
+        db.Burgers.create({
             burger_name: req.params.burger_name,
             devoured: false
         }).then(function(newBurger) {
@@ -21,7 +21,7 @@ module.exports = function(app) {
     });
 
     app.put("/", function(req, res) {
-        db.Burger.update(
+        db.Burgers.update(
             req.body, {
                 where: {
                     devoured: req.body.devoured
