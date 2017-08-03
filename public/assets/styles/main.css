@@ -1,0 +1,46 @@
+#not-devoured {
+  padding: 5px;
+  margin: 5px;
+  background: #faebd7;
+}
+
+#burgers {
+	list-style-type: none;
+}
+
+.burger-image {
+	position: relative;
+  text-align: center;
+}
+
+.burger-title-first {
+    position: absolute;
+    top: 65px;
+    text-align: center;
+    color: #614c4c;
+    font-size: 75px;
+}
+
+.burger-title-last {
+	position: absolute;
+    top: 65px;
+    text-align: center;
+    right: 260px;
+    color: #614c4c;
+    font-size: 75px;
+}
+
+.burger-name {
+	/*border: 1px solid black;
+    border-radius: 30px;
+    text-align: center;
+    width: 250px;*/
+}
+
+#devour-button, #submit-burger {
+    border-radius: 30px;
+    background-color: #fff;
+    border: 1px solid #000;
+    padding-left: 10px;
+    padding-right: 10px;
+}
