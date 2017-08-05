@@ -7,9 +7,9 @@ module.exports = function(app) {
 
     app.get("/", function(req, res) {
         db.Burgers.findAll({
-            where: {
-                devoured: false
-            }
+            // where: {
+            //     devoured: "false"
+            // }
         }).then(function(findBurgers) {
             var burgersObject = {
                 Burgers: findBurgers
@@ -22,14 +22,14 @@ module.exports = function(app) {
     app.post("/", function(req, res) {
         db.Burgers.create({
             burger_name: req.body.burger_name,
-            devoured: false
+            devoured: "false"
         }).then(function(newBurger) {
             res.redirect("/");
         });
     });
 
-    app.put("/", function(req, res) {
-        db.Burgers.update({ devoured: true }, {
+    app.post("/:id", function(req, res) {
+        db.Burgers.update({ devoured: "true" }, {
             where: {
                 id: req.params.id
             }

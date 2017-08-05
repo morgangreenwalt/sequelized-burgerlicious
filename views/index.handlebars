@@ -12,10 +12,10 @@
   <div class="col-md-4">
     <div id="burgers">
       <h3>Burgers I Want to Try:</h3>
-      {{#each burgers}}
+      {{#each Burgers}}
       {{#unless this.devoured}}
         <h4 class="burger-name">{{this.id}}. {{this.burger_name}}</h4>
-        <form action="/{{this.id}}?_method=PUT" method="POST">
+        <form action="/{{this.id}}" method="POST">
           <input type="hidden" name="devoured" value="true">
           <button type="submit" id="devour-button" name="devour-button">Devour It</button>
         </form>
@@ -27,7 +27,7 @@
   <div class="col-md-4">
     <div id="burgers">
       <h3>Burgers I've Devoured:</h3>
-      {{#each burgers}}
+      {{#each Burgers}}
         {{#if this.devoured}}
            <h4 class="burger-name">{{this.id}}. {{this.burger_name}}</h4>
         {{/if}}
