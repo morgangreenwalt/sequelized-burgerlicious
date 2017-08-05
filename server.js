@@ -29,8 +29,6 @@ app.use(express.static("public"));
 // Routes
 // =============================================================
 require("./migrations/api-routes.js")(app);
-require("./migrations/html-routes.js")(app);
-
 
 // Starts the server to begin listening
 // =============================================================
