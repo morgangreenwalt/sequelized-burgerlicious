@@ -1,7 +1,7 @@
 Burgerlicious (Sequelize)
 -------
 
-An interactive web application that tracks burgers a user would like to "try". Once tried, you can mark "complete" to view all the burgers you've tried.
+An interactive web application that tracks burgers you'd like to "try". Once tried, you can mark "complete" to view all the burgers you've tried.
 
 Technologies used: 
 1. Node.js
